@@ -1,0 +1,19 @@
+{% extends "Todo_List/base.html" %}
+{% block content %}
+<a class="btn btn-primary btn-lg btn-block" href="{% url 'Todo-add' %}" role="button">Add</a>
+   {% for activity in activities reversed%}
+        <article class="media content-section">
+            <!-- <img class="rounded-circle article-img" src="{{ post.Auther.profile.image.url }}"> -->
+            <div class="media-body">
+                <div class="article-metadata">
+                  <a class="mr-2" href="#">{{ activity.title }}</a>
+                  <small class="text-muted">{{ activity.date|date:"F d, Y" }}</small>
+                  <span class="right"> <a role="button" class="btn btn-outline-success" href="deleteact/{{activity.id}}">Done</a></span>
+                </div>
+                <!-- <h2><a class="article-title" href="#">{{ post.Title }}</a></h2> -->
+                <p class="article-content">{{ activity.content }}</p>
+            </div>
+        </article>
+
+   {% endfor %}
+{% endblock content %}
