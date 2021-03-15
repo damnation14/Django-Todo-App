@@ -8,7 +8,7 @@
                 <div class="article-metadata">
                   <a class="mr-2" href="#">{{ activity.title }}</a>
                   <small class="text-muted">{{ activity.date|date:"F d, Y" }}</small>
-                  <span class="right"> <a role="button" class="btn btn-outline-success" href="deleteact/{{activity.id}}">Done</a></span>
+                  <span class="right"> <a role="button" class="btn btn-outline-success" href="{% url 'Todo-delete' activity.id %}">Done</a></span>
                 </div>
                 <!-- <h2><a class="article-title" href="#">{{ post.Title }}</a></h2> -->
                 <p class="article-content">{{ activity.content }}</p>
