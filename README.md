@@ -1,4 +1,4 @@
-#Basic Todo App
+# Django Todo App
 
 Built using Django
 
