@@ -16,8 +16,7 @@ def add_activity(request):
             return redirect('Todo-home')
     else:
         form = ActivityForm()
-
-    return render(request, 'Todo_List/add_activity.html', {'form': form})
+        return render(request, 'Todo_List/add_activity.html', {'form': form})
 
 def search_activity(request):
     if request.method == 'GET':
